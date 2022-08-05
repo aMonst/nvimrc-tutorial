@@ -50,17 +50,3 @@ vim.o.list = true
 vim.o.background = "dark"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
-
--- 设置 leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-vim.api.nvim_set_keymap("n", "<leader>ee", ":vs $MYVIMRC<CR>", {silent = true, noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>ss", ":wq<cr>:source $MYVIMRC<cr>", {silent = true, noremap = true})
-
-vim.cmd([[
-    augroup NVIMRC
-        autocmd!
-        autocmd BufWritePost init.lua source %
-    augroup END
-]])
