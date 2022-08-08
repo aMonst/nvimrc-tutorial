@@ -34,3 +34,8 @@ vim.api.nvim_set_keymap("i", "<C-l>", "<esc>viwuwa", {noremap = true, silent = t
 -- 快速打开vimrc文件
 vim.api.nvim_set_keymap("n", "<leader>ee", ":vs $MYVIMRC<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>ss", ":source $MYVIMRC<CR>", {noremap = true, silent = true})
+-- 删除当前光标所在单词
+vim.api.nvim_set_keymap("n", "dw", "diw", {noremap = true, silent = true})
+-- 可视模式下可以快速移动缩进多行文本
+vim.api.nvim_set_keymap("v", ">>", ">>gv", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("v", "<<", "<<gv", {noremap = true, silent = true})
