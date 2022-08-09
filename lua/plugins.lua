@@ -5,4 +5,5 @@ return require('packer').startup(function(use)
     -- 主题配置
     use 'folke/tokyonight.nvim'
     use 'Mofiqul/vscode.nvim'
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 end)

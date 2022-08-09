@@ -3,13 +3,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- 配置tabline快捷键，主要以 t开头代表 t
--- 关闭当前标签页
-vim.api.nvim_set_keymap("n", "tc", ":tabclose<CR>", {noremap = true, silent = true})
--- 关闭所有标签页，仅保留当前标签页
-vim.api.nvim_set_keymap("n", "to", ":tabonly<CR>", {noremap = true, silent = true})
--- gt 切换到下一个，gT切换到上一个
-
 -- 翻页操作
 vim.api.nvim_set_keymap("n", "<C-f>", "10jzz", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<C-b>", "10kzz", {noremap = true, silent = true})
