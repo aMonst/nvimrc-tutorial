@@ -3,3 +3,9 @@ require("basic")
 require("keybindings")
 require("autocmd")
 require("plugins")
+require("plugin-config/tokyonight")
+require("plugin-config/vscode")
+
+-- 启用主题
+vim.cmd[[colorscheme tokyonight]]
+-- vim.cmd[[colorscheme vscode]]
