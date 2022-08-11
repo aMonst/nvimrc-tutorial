@@ -3,6 +3,15 @@ require("bufferline").setup{
     options = {
         mode = "buffers",
         numbers = "ordinal",
+        -- 左侧让出 nvim-tree 位置
+        offsets = {
+            {
+                filetype = "NvimTree",
+                text = "File Explorer",
+                highlight = "Directory",
+                text_align = "left"
+            }
+        }
     }
 }
 -- 快速在buffer间跳转

@@ -6,6 +6,7 @@ require("plugins")
 require("plugin-config/tokyonight")
 require("plugin-config/vscode")
 require("plugin-config/buffer")
+require("plugin-config/nvimtree")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
