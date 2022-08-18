@@ -9,6 +9,7 @@ require("plugin-config/buffer")
 require("plugin-config/nvimtree")
 require("plugin-config/lualine")
 require("plugin-config/dashboard")
+require("plugin-config/whichkey")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
