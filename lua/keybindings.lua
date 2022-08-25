@@ -19,6 +19,15 @@ vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", {noremap = true, silent = tr
 vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", {noremap = true, silent = true})
 
+-- 终端下多窗口跳转
+vim.api.nvim_set_keymap("t", "<leader>h", "<C-\\><C-n><C-w>h", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<leader>l", "<C-\\><C-n><C-w>l", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<leader>j", "<C-\\><C-n><C-w>j", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<leader>k", "<C-\\><C-n><C-w>k", {noremap = true, silent = true})
+-- 终端模式
+vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-n>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-\\>", ":split term://zsh<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<A-\\>", "<C-\\><C-n>:bdelete! %<CR>", {noremap = true, silent = true})
 -- 其他有用的绑定
 -- 使用 <C-u> 将光标所在单词转化为全大写
 vim.api.nvim_set_keymap("i", "<C-u>", "<esc>viwUwa", {noremap = true, silent = true})
