@@ -26,17 +26,6 @@ vim.api.nvim_set_keymap("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>", {norema
 vim.api.nvim_set_keymap("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>bg", ":BufferLinePick<CR>", {noremap = true, silent = true})
 
--- 终端模式下跳转
-vim.api.nvim_set_keymap("t", "<leader>1", "<C-\\><C-n>:BufferLineGoToBuffer 1<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>2", "<C-\\><C-n>:BufferLineGoToBuffer 2<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>3", "<C-\\><C-n>:BufferLineGoToBuffer 3<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>4", "<C-\\><C-n>:BufferLineGoToBuffer 4<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>5", "<C-\\><C-n>:BufferLineGoToBuffer 5<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>6", "<C-\\><C-n>:BufferLineGoToBuffer 6<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>7", "<C-\\><C-n>:BufferLineGoToBuffer 7<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>8", "<C-\\><C-n>:BufferLineGoToBuffer 8<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>9", "<C-\\><C-n>:BufferLineGoToBuffer 9<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("t", "<leader>bg", "<C-\\><C-n>:BufferLinePick<CR>", {noremap = true, silent = true})
 -- 关闭当前buffer
 vim.api.nvim_set_keymap("n", "<leader>bc", ":bdelete %<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>bp", ":BufferLinePickClose<CR>", {noremap = true, silent = true})

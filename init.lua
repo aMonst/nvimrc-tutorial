@@ -10,6 +10,7 @@ require("plugin-config/nvimtree")
 require("plugin-config/lualine")
 require("plugin-config/dashboard")
 require("plugin-config/whichkey")
+require("plugin-config/toggleterm")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
@@ -42,14 +43,3 @@ vim.cmd[[colorscheme tokyonight]]
 --         vim.wo[win_id].statusline = get_mode() .. "|%f%m|%l:%L%=" .. vim.g.encoding .. "|%y"
 --     end
 -- })
-
--- 测试终端模式下几种事件
--- vim.cmd[[
---     augroup TERM_MODE
---         autocmd!
---         autocmd TermOpen * echom "TermOpen Events"
---         autocmd TermEnter * echom "TermEnter Events"
---         autocmd TermLeave * echom "TermLeave Events"
---         autocmd TermClose * echom "TermClose Events"
---     augroup END
--- ]]
