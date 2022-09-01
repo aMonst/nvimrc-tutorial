@@ -20,4 +20,12 @@ return require('packer').startup(function(use)
     use {'glepnir/dashboard-nvim'}
     use {"folke/which-key.nvim"}
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} , {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+        }}
+    }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
 end)

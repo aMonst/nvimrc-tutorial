@@ -11,6 +11,7 @@ require("plugin-config/lualine")
 require("plugin-config/dashboard")
 require("plugin-config/whichkey")
 require("plugin-config/toggleterm")
+require("plugin-config/telescope")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
