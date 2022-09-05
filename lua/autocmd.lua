@@ -41,32 +41,33 @@ if vim.fn.has "nvim-0.7" then
         end
     })
 
---    local auto_save_session = vim.api.nvim_create_augroup("AUTO_SAVE_SESSION", {clear = true})
---    vim.api.nvim_create_autocmd({"ExitPre"}, {
---        pattern = "*",
---        group = auto_save_session,
---        callback = save_session
---    })
---    vim.api.nvim_create_autocmd({"VimEnter"}, {
---        pattern = "*",
---        group = auto_save_session,
---        callback = load_session
---    })
+    local auto_indent = vim.api.nvim_create_augroup("AUTO_INDENT", {clear = true})
+    vim.api.nvim_create_autocmd({"BufWritePost"}, {
+        pattern = "*",
+        group = auto_indent,
+        command = 'normal! gg=G``'
+    })
+    --    vim.api.nvim_create_autocmd({"VimEnter"}, {
+    --        pattern = "*",
+    --        group = auto_save_session,
+    --        callback = load_session
+    --    })
 else
     vim.cmd[[
         augroup NVIMRC
-            autocmd!
-            autocmd BufWritePost init.lua source $MYVIMRC
-            autocmd BufReadPost init.lua set path+=**/*
+        autocmd!
+        autocmd BufWritePost init.lua source $MYVIMRC
+        autocmd BufReadPost init.lua set path+=**/*
+        autocmd BufWritePost * normal! gg=G``
         augroup END
-    ]]
+        ]]
 
---    vim.cmd[[
---        augroup AUTO_SAVE_SESSION
---            autocmd!
---            autocmd ExitPre * lua save_session()
---            autocmd VimEnter * lua load_session()
---        augroup END
---    ]]
+    --    vim.cmd[[
+    --        augroup AUTO_SAVE_SESSION
+    --            autocmd!
+    --            autocmd ExitPre * lua save_session()
+    --            autocmd VimEnter * lua load_session()
+    --        augroup END
+    --    ]]
 end
 

@@ -13,6 +13,7 @@ require("plugin-config/whichkey")
 require("plugin-config/toggleterm")
 require("plugin-config/telescope")
 require("plugin-config/auto_session")
+require("plugin-config/treesitter")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
