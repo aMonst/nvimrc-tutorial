@@ -12,6 +12,7 @@ require("plugin-config/dashboard")
 require("plugin-config/whichkey")
 require("plugin-config/toggleterm")
 require("plugin-config/telescope")
+require("plugin-config/auto_session")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]

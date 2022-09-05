@@ -28,4 +28,5 @@ return require('packer').startup(function(use)
         }}
     }
     use { "nvim-telescope/telescope-file-browser.nvim" }
-end)
+    use {'rmagatti/auto-session'}
+    end)
