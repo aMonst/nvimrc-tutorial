@@ -23,10 +23,14 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} , {
-        'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+            'nvim-treesitter/nvim-treesitter',
+            run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
         }}
     }
     use { "nvim-telescope/telescope-file-browser.nvim" }
     use {'rmagatti/auto-session'}
-    end)
+    use {
+        "williamboman/nvim-lsp-installer",
+        "neovim/nvim-lspconfig",
+    }
+end)
