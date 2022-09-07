@@ -15,6 +15,7 @@ require("plugin-config/telescope")
 require("plugin-config/auto_session")
 require("plugin-config/treesitter")
 require("plugin-config/nvim_lsp_install")
+require("plugin-config/cmp")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
