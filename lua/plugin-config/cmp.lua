@@ -4,7 +4,7 @@ cmp.setup({
     -- 设置代码片段引擎，用于根据代码片段补全
     snippet = {
         expand = function(args)
-            vim.fn["vsnip#anymous"](args.body)
+            vim.fn["vsnip#anonymous"](args.body)
         end,
     },
 

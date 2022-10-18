@@ -1,0 +1,45 @@
+{
+    "example": {
+        "prefix": ["hello"],
+        "body": [
+            "#include <stdio.h>",
+            "int main(int argc, char* argv[])",
+            "{",
+                "\tprintf(\"hello world\");",
+                "\treturn 0;",
+                "}"
+
+        ],
+        "description": "create a hello world"
+    },
+
+
+    "func": {
+        "prefix": ["func"],
+        "body": [
+            "${1|int,float,double,char,short,*|} $2()",
+            "{",
+                "\treturn $3;",
+                "}"
+
+        ],
+        "description": "create a function return int"
+    },
+
+
+    "doc-header": {
+        "prefix": ["doc-header"],
+        "body": [
+            "/**",
+            "* @file ${TM_FILENAME}",
+            "* @bref ${1}",
+            "* @details ${2}",
+            "* @date ${CURRENT_YEAR}/${CURRENT_MONTH}/${CURRENT_DATE}",
+            "* @commit history:",
+            "* \t v${3}: ${4}",
+            "*/${0}"
+
+        ],
+        "description": "create a doc header"
+    }
+}
