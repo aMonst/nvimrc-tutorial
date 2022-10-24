@@ -31,10 +31,8 @@ return require('packer').startup(function(use)
     }
     use { "nvim-telescope/telescope-file-browser.nvim" }
     use {'rmagatti/auto-session'}
-    use {
-        "williamboman/nvim-lsp-installer",
-        "neovim/nvim-lspconfig",
-    }
+    use {"williamboman/mason.nvim"}
+    use {"neovim/nvim-lspconfig"}
     -- nvim-cmp
     use {'hrsh7th/cmp-nvim-lsp'}
     use {'hrsh7th/cmp-buffer'}
@@ -50,4 +48,7 @@ return require('packer').startup(function(use)
     -- lspsaga
     use {'glepnir/lspsaga.nvim'}
     use {'simrat39/symbols-outline.nvim'}
+
+    -- dap
+    use {'mfussenegger/nvim-dap'}
 end)
