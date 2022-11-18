@@ -2,7 +2,7 @@ local dap = require('dap')
 
 dap.adapters.python = {
     type = 'executable';
-    command = "/usr/bin/python3.8";
+    command = "/usr/bin/python3";
     args = {'-m', 'debugpy.adapter'};
 }
 
@@ -14,7 +14,7 @@ dap.configurations.python = {
 
         program = "${file}";
         pythonPath = function ()
-            return "/usr/bin/python3.8"
+            return "/usr/bin/python3"
         end
     },
 }

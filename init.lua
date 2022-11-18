@@ -18,6 +18,8 @@ require("plugin-config/cmp")
 require("plugin-config/lspsaga")
 require("plugin-config/symbols_outline")
 require("plugin-config/mason")
+require("plugin-config/dap-config")
+require("plugin-config/dap-ui")
 
 -- 启用主题
 vim.cmd[[colorscheme tokyonight]]
