@@ -53,4 +53,5 @@ return require('packer').startup(function(use)
     use {'mfussenegger/nvim-dap'}
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use {"theHamsta/nvim-dap-virtual-text", requires = {"nvim-treesitter/nvim-treesitter" , "mfussenegger/nvim-dap"}}
+    use {"sakhnik/nvim-gdb", run = "./install.sh"}
 end)
