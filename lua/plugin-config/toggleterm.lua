@@ -32,5 +32,15 @@ function htop_toggle()
     htopterm:toggle()
 end
 
+local lazygit_term = Terminal:new({
+    cmd = 'lazygit',
+    direction = 'float'
+})
+
+function lazygit_toggle()
+    lazygit_term:toggle()
+end
+
 vim.api.nvim_set_keymap("n", "<leader>py", "<Cmd>lua python_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>ht", "<Cmd>lua htop_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>lg", "<Cmd>lua lazygit_toggle()<CR>", {noremap = true, silent = true})
